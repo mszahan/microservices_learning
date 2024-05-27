@@ -1,3 +1,6 @@
-/__pycache__/
-/migrations/__pycache__/
-/media/
+__pycache__/
+migrations/__pycache__/
+media/
+config/__pycache__/
+newsletter/__pycache__/
+newsletter/migrations/__pycache__/
