@@ -4,3 +4,4 @@ media/
 config/__pycache__/
 newsletter/__pycache__/
 newsletter/migrations/__pycache__/
+secrets.json
