@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+<!-- title  -->
+{% load static %}
+<!-- extends  -->
+{% block title %} Subscription {%endblock title %}
+<!-- head -->
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/sub_form.css' %}" />
+{% endblock head %}
+
+<!-- main content  -->
+{% block main %}
+<h1 class="sub_title">Enter the address where we can deliver your magazine</h1>
+<div class="sub_form">
+  <form method="post" class="form">
+    {% csrf_token %} {{ form}}
+    <input type="submit" value="Subscribe" />
+  </form>
+</div>
+{% endblock main %}

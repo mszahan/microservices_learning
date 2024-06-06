@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+<!-- title  -->
+{% load static %}
+<!-- extends  -->
+{% block title %} Success {%endblock title %}
+<!-- head -->
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/sub_form.css' %}" />
+{% endblock head %}
+
+<!-- main content  -->
+{% block main %}
+<div class="success">
+  <h2 class="success_title">Thank you {{name}} for your adress</h2>
+  <p class="success_message">
+    You'll receive the latest edition of our magazine within three days.
+  </p>
+</div>
+
+{% endblock main %}
