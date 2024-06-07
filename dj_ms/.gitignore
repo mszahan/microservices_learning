@@ -4,4 +4,6 @@ media/
 config/__pycache__/
 subscription/__pycache__/
 subscription/migrations/__pycache__/
+addrapi/__pycache__/
+addrapi/migrations/__pycache__/
 secrets.json
