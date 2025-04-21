@@ -1,21 +1,30 @@
 # from rest_framework.views import APIView
 # from rest_framework.response import Response
 # from rest_framework import status
-from rest_framework import mixins, generics
+from rest_framework import mixins, generics, viewsets
+from rest_framework.permissions import AllowAny
 from subscription.models import Address
 from .serializers import AddressSerializer
 
 
 
-
-## with generic class based views
-class AddressList(generics.ListCreateAPIView):
+## with viewsets
+class AddressViewSet(viewsets.ModelViewSet):
     queryset = Address.objects.all()
     serializer_class = AddressSerializer
+    permission_classes = [AllowAny]
 
-class AddressDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Address.objects.all()
-    serializer_class = AddressSerializer
+
+
+
+# ## with generic class based views
+# class AddressList(generics.ListCreateAPIView):
+#     queryset = Address.objects.all()
+#     serializer_class = AddressSerializer
+
+# class AddressDetail(generics.RetrieveUpdateDestroyAPIView):
+#     queryset = Address.objects.all()
+#     serializer_class = AddressSerializer
 
 
 
